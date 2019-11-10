@@ -191,14 +191,20 @@ public class Polynom implements Polynom_able{
 	@Override
 	public boolean equals(Polynom_able p1) {
 
-		for(Iterator<Monom> m1 = this.iteretor(); m1.hasNext();) {
-
-			Monom mono_temp = new Monom(m1.next());
-			for(Iterator<Monom> m2 = p1.iteretor(); m2.hasNext();) {
-				if(!mono_temp.equals(m2.next())) {
-					return false;
-				}
-			}
+//		for(Iterator<Monom> m1 = this.iteretor(); m1.hasNext();) {
+//
+////			Monom mono_temp = new Monom(m1.next());
+////			
+////			for(Iterator<Monom> m2 = p1.iteretor(); m2.hasNext();) {
+////				if(!mono_temp.equals(m2.next())) {
+////					return false;
+////				}
+////			}
+//		}
+		
+		for(Iterator<Monom> m1 = p1.iteretor(); m1.hasNext();) {
+			Monom temp = new Monom(m1.next());
+			if(!polylist.contains(temp)) {return false;}
 		}
 		return true;
 	}

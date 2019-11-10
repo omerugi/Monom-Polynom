@@ -15,11 +15,11 @@ Valid monom: ax^b - were a is a double and b is a non negative integer.
 receive a String and check if it is a valid Monom String: 
 Valid monom is - ax^b : a=Double type , b=+Intager type;
 the function examine the String into 3 main checks:
-1) check if the coefficient is a valid double type using the method "isValidDouble".
+a) check if the coefficient is a valid double type using the method "isValidDouble".
 		(by extract the substring from char 0 to 'x' or to the String length if 'x' is not existing.
-2) check if the Monom have a degree power that greater then 1 
+b) check if the Monom have a degree power that greater then 1 
 		(which means that after the coefficient should appear "x^").   
-3)  check if the power is a valid Int type by using "isValidInt" method.
+c)  check if the power is a valid Int type by using "isValidInt" method.
 	  	(by extracts the substring from the char '^' to the String.length).
 
 Valid Input:

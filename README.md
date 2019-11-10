@@ -1,1 +1,2 @@
-#This is the read me file to Ex0
+# OOP - Project Ex0:
+# Monom & Plynom.

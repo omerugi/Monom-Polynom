@@ -39,8 +39,25 @@ If so add the coefficients.
 Otherwise throw Exception.
 @param m The monom wish to add.
 
-3.
-  
+3. ``public void multipy(Monom d)``
+
+ recive a monom and multiplies.
+ 
+ @param d monom.
+ 
+ 4. ``public String toString()``
+ 
+ to string method returns the String of the given monom.
+ 
+ 5. ``public boolean equals(Monom m)``
+
+recive a monom and check wither they are logically equals in deviation of epsilon.
+
+@param m monom to be compare with.
+
+@return
+
+
 
 ***Self added methods:***
 1. ``private boolean isValidDouble(String s)``
@@ -62,5 +79,5 @@ Receive the power substring and by Integer.parse returns wither the substring is
  
 ---------------------------------------------------------------------------------------------------------------------
 * @author omerugi
-*
+
 

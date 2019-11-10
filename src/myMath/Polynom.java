@@ -11,19 +11,19 @@ import myMath.Monom;
 * 																														|
 * Polynom class works as following: 																					|
 * *Receiving a String containing "Polynom". 																			|
-* *Breaks down the String into separate Monoms- and add separately to a ArrayList that will contain the Polynom.		|
+* *Breaks down the String into separate Monoms- and add separately to a ArrayList that will contain the Polynom.	
 *----------------------------------------------------------------------------------------------------------------------																														|
 * 											**Methods implemented**
 * ---------------------------------------------------------------------------------------------------------------------
-* 1) 	Polynom(String)			-Constructor.	 																		|
-* 2)	f						-Place x in the polynom.																|
-* 3)	add(Polynom_able)	 	-Adding two Polynom_able objects into one.												|
+* 1) 	Polynom(String)				-Constructor.	 																		|
+* 2)	f					-Place x in the polynom.																|
+* 3)	add(Polynom_able)	 		-Adding two Polynom_able objects into one.												|
 * 4)	add(Monom)				-Adding Monom into the Polynom.															|
 * 5)	substruct(Polnom_able) 	-Substruction of two Polnoms.															|
 * 6)	multiply()				-Multiplying two Polynoms.																|
 * 7)	equals()				-Check if two Polynoms are equal- by deviation of Epsilon.								|
 * 8)	isZero					-Check if Polynom is equal to zero.														|
-* 9)	root					-Calculate the point which the Polynom==zero between x0,x1 with deviation of Epsilon.	|
+* 9)	root					-Calculate the point which the Polynom==zero between x0,x1 with deviation of Epsilon.	
 * 10)	Copy					-Crates deep copy of Polynom.															|
 * 11)	Derivative				-Derivative the Polynom.																|
 * 12)	area					-Calculates the area size between the function to positive x axis.						|
@@ -31,7 +31,7 @@ import myMath.Monom;
 * 14) 	Iterator				-Returns Iterator from Class Iterator.													|
 * 15) 	toString				-Returns a String of the Polynom.														|
 * ---------------------------------------------------------------------------------------------------------------------
-* @author dorge
+* 
 *
 */
 public class Polynom implements Polynom_able{
@@ -190,17 +190,6 @@ public class Polynom implements Polynom_able{
 	// maybe substruction?
 	@Override
 	public boolean equals(Polynom_able p1) {
-
-//		for(Iterator<Monom> m1 = this.iteretor(); m1.hasNext();) {
-//
-////			Monom mono_temp = new Monom(m1.next());
-////			
-////			for(Iterator<Monom> m2 = p1.iteretor(); m2.hasNext();) {
-////				if(!mono_temp.equals(m2.next())) {
-////					return false;
-////				}
-////			}
-//		}
 		
 		for(Iterator<Monom> m1 = p1.iteretor(); m1.hasNext();) {
 			Monom temp = new Monom(m1.next());

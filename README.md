@@ -6,7 +6,9 @@ This class represents a valid Monom OBJ.
 Valid monom: ax^b - were a is a double and b is a non negative integer.
 
 ----------------------------------------------------------------------------------------------------------------------																														
-**Methods implemented**       
+**Methods implemented**      
+
+----------------------------------------------------------------------------------------------------------------------
 
 ***Required methods:***
 
@@ -55,9 +57,9 @@ recive a monom and check wither they are logically equals in deviation of epsilo
 
 @param m monom to be compare with.
 
-@return
+@return 
 
-
+----------------------------------------------------------------------------------------------------------------------
 
 ***Self added methods:***
 1. ``private boolean isValidDouble(String s)``

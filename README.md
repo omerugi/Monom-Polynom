@@ -101,7 +101,7 @@ Receive the power substring and by Integer.parse returns wither the substring is
 
  
 ---------------------------------------------------------------------------------------------------------------------
-# Polynom Class #:
+# Polynom Class: #
 #Class info: # 
 This class represents a Polynom OBJ- implemented by String of Monom objects.                                
                                                             

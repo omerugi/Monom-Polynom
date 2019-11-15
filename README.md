@@ -1,13 +1,13 @@
 # OOP - Project Ex0: Monom & Polynom.
 Editors: Dor Getter & Omeri Rugi
 
-Ariel university -Object-Oriented Prograkmming course task 1. 
+Ariel university -Object-Oriented Programming course task 1. 
 
 
 ## About the project: 
 
 This project is built to create and use Polynoms and Monom's mathematical expressions using given interfaces.
-The program allows to build Monoms And Polynoms objects, either with a String or by creating a new object which stands the characteristics of a valid polynomiale expression.
+The program allows building Monoms And Polynoms objects, either with a String or by creating a new object which stands the characteristics of a valid polynomial expression.
 The user of this project can add, subtract, multiply and derivate Monoms and Polynomials expressions.
 Also, the user can find the root of a Polynomial expression in a close interval and sum the blocked area between the polynomial function and the positive x-axis using Riemann's Integral.
 
@@ -23,8 +23,8 @@ in which:
 
 Monom class works as follows: 
 *    1. Receiving a String containing mathematical expression according to Monom ax^b structure. 
-*    2. Creating a Monom obj. using a direct constructor inputs the coefficient and the power. 
-	
+*    2. Creating a Monom obj. using direct constructor inputs the coefficient and the power. 
+    
 *    the class validates that the inputs are forming a valid Monom, and supports the follows Methods
 ----------------------------------------------------------------------------------------------------------------------                                                                                                                        
 **Methods implemented**      
@@ -37,9 +37,9 @@ Monom class works as follows:
 @param s - String containing a Monom type;
 receive a String and check if it is a valid Monom String: 
 Valid monom is - ax^b : a=Double type , b=+Intager type;
-the function examine the String into 3 main checks:
+the function examines the String into 3 main checks:
 1) check if the coefficient is a valid double type using the method "isValidDouble".
-        (by extract the substring from char 0 to 'x' or to the String length if 'x' is not existing.
+        (by extracting the substring from char 0 to 'x'  the String length if 'x' is not existing).
 2) check if the Monom have a degree power that greater then 1 
         (which means that after the coefficient should appear "x^").   
 3)  check if the power is a valid Int type by using "isValidInt" method.
@@ -47,36 +47,36 @@ the function examine the String into 3 main checks:
 
 Valid Input:
 valid input is a String containing only a valid Double type coefficient and a valid Int power.
-meaning that the following cases will be cause to a RuntimeExeption:
+meaning that the following cases will be caused to a RuntimeExeption:
 
 +    case 1: any mathematical operations such as: "(2+3.5)x^2*2".
 +    case 2: any typing error containing a none integer type rather then "x^" : "12fx^2e".
-+    case 3: any mathematical expression for representing a rational numbers: "ex^2" , "pei*x".
++    case 3: any mathematical expression for representing a rational number: "ex^2" , "pei*x".
 
  
 
 2. ``public void add(Monom m)``
 
-recive a monom and check by comparator wither the powers are equal.
+receive a Monom and check by comparator wither the powers are equal.
 If so add the coefficients. 
-Otherwise throw Exception.
-@param m The monom wish to add.
+Otherwise, throw Exception.
+@param m The Monom wish to add.
 
-3. ``public void multipy(Monom d)``
+3. ``public void multiply(Monom d)``
 
- recive a monom and multiplies.
+ receive a Monom and multiplies.
  
- @param d monom.
+ @param d Monom.
  
  4. ``public String toString()``
  
- to string method returns the String of the given monom.
+ to string, the method returns the String of the given Monom.
  
  5. ``public boolean equals(Monom m)``
 
-recive a monom and check wither they are logically equals in deviation of epsilon.
+receive a Monom and check to wither they are logical equals in deviation of epsilon.
 
-@param m monom to be compare with.
+@param m Monom to be compared with.
 
 @return 
 
@@ -89,7 +89,7 @@ Receive the coefficient substring and by Double.parse returns wither the substri
 
 @param s Substring contains coefficient.
 
-@return true-if double,Exception otherwise.
+@return true-if double, Exception otherwise.
 
 2. ``private boolean isValidInt(String s)``
 
@@ -97,7 +97,7 @@ Receive the power substring and by Integer.parse returns wither the substring is
  
 @param s Substring contains coefficient.
 
-@return true-if Int,Exception otherwise.
+@return true-if Int, Exception otherwise.
 
  
 ---------------------------------------------------------------------------------------------------------------------
@@ -105,11 +105,11 @@ Receive the power substring and by Integer.parse returns wither the substring is
 #Class info: # 
 This class represents a Polynom OBJ- implemented by String of Monom objects.                                
                                                             
-Polynom class works as following: 
+Polynom class works as follows: 
 
 +    Receiving a String containing "Polynom" / Monom OBJ.
-+    case 1: Breaks down the String into separate Monoms- and add separately to a ArrayList that will contain the Polynom.
-+    case 2: recived a Monom OBJ. and adds it to a Polynom ArrayList.
++    case 1: Breaks down the String into separate Monoms- and add separately to an ArrayList that will contain the Polynom.
++    case 2: received a Monom OBJ. and adds it to a Polynom ArrayList.
 
 ----------------------------------------------------------------------------------------------------------------------                                                                                                                        
 **Methods implemented**      
@@ -120,32 +120,32 @@ Polynom class works as following:
 
 1. ``public void add(Polynom_able p1)``
 
-The function receives a Polynom_able (type) p1 and adding it into the the polynom object ,"this", in the class.
+The function receives a Polynom_able (type) p1 and adding it into the Polynom object, "this", in the class.
 
 Way of action:
 
-Using a Iterator of type Monom, go over all the Monoms in the polynom p1 by using a while loop.
+Using an Iterator of type Monom, go over all the Monoms in the Polynom p1 by using a while loop.
 
-Add each element in p1 to ,"this", Polynom in the class.
+Add each element in p1 to, "this", Polynom in the class.
 
 @param p1 - Polynom to be added.                 
 
 2.``public void add(Monom m1)``
 
-The function receive a Monom and add it to a Polynom by the following cases: 
+The function receives a Monom and adds it to a Polynom by the following cases: 
 
 * case 1: if the Monom's power is equal to a Monom in the Polynom-    sums the Monoms Coefficient.
-* case 2: if the Monom's power is not equal to any of the Monoms in the Polynom-    add the Monom to Polynom List.        
+* case 2: if the Monom's power is not equal to any of the Monom's in the Polynom-    add the Monom to Polynom List.        
  
 Way of action:
 
-Using a for loop go over the Polynom.
+Using a for loop goes over the Polynom.
 
 in any Monom in the Polynom check if its a case 1 or case 2.   
 if there is a Monom that its power is the same as m1 sum the coefficients and check: 
 +    If the coefficient after adding is close to zero by Epsilon: remove the Monom from Polynom.
 +    If the coefficient after adding is a number greater then 0+/-(Epsilon) add the Coefficients.            
-    If there is none such Monoms with same power as m1 in Polynom. 
+    If there is none such Monoms with the same power as m1 in Polynom. 
 +     Add the Monom as it is to the Polynom equation.
 +    Sort the Polynom for convenient.
 
@@ -153,12 +153,12 @@ if there is a Monom that its power is the same as m1 sum the coefficients and ch
 
 3.``public void substract(Polynom_able p1)``
 
-The function receive a Polynom and substract it from "this" Polynom Obj. in the class.   
+The function receives a Polynom and subtracts it from "this" Polynom Obj. in the class.   
 
 Way of action:
 
 +    Construct a new Iterator on p1. 
-+    If p1 is same as the Polynom Obj. (same pointer). the Polynom is initialized. 
++    If p1 is the same as the Polynom Obj. (same pointer). the Polynom is initialized. 
 +    Using a while loop- change the coefficients of every Monom in p1 to the opposite sign. (negative <--> Positive.)
 +    Using add Monom method adding each Monom of p1 to the Polynom Obj.   
 
@@ -178,7 +178,7 @@ Way of action:
 
 5.``public void multiply(Polynom_able p1)``
 
-The function receive a Polynom and multiply it by the Polynom Obj. in the class.
+The function receives a Polynom and multiplies it by the Polynom Obj. in the class.
 
 Way of action:
 
@@ -192,12 +192,12 @@ Way of action:
 
 6.``public boolean equals (Polynom_able p1)``
 
-The function receive a Polynom and check wither it equal Polynom Obj. in the class.
+The function receives a Polynom and checks to wither it equal Polynom Obj. in the class.
 
 Way of action:
 +    Using a for loop go over each Monom in the Polynom Obj. in the class.
-+    Using a nested loop go over each Monom in p1.
-+    Check if there is a Monom in p1 that is equals to Monom in Polynom m1 (Polynom list in the class).      
++    Using a nested loop goes over each Monom in p1.
++    Check if there is a Monom in p1 that equals to Monom in Polynom m1 (Polynom list in the class).      
 
 @param p1- Polynom to check if equal. 
 
@@ -213,7 +213,7 @@ Way of action:
 
 7.``public Polynom_able copy()``
 
-The function creates deep copy of the Polynom Obj.
+The function creates a deep copy of the Polynom Obj.
 
 Way of action:
 +    Copying each Monom from Polynom Obj list to a new Polynom.  
@@ -222,21 +222,19 @@ Way of action:
 
 8.``public Polynom_able derivative()``
 
-The function applys a derivative operation on the Polynom.
+The function applies a derivative operation on the Polynom.
             
 Way of action:
-+    Using Polynom Iterator the function go over each Monom and apply the derivative method of Monom.
++    Using Polynom Iterator the function goes over each Monom and applies the derivative method of Monom.
 +    Adds the new Monom after derivation to the new Polynom.      
 @return The derivation of the Polynom.  
 
 
 9.``public double root(double x0, double x1, double eps)``
 
-The function in a given 2 x's points returns the x dot in which the function 
-uts the x axis.   
+The function in a given 2 x's points returns the x dot in which the function cuts the x-axis.   
 
 Using the Intermediate Value Theorem
-
 If f(x) is continuous on a closed interval [a,b], and c is any number between f(a) and f(b) inclusive
  then there is at least one number x in the closed interval such that f(x)=c.
  and if f(a)*f(b)<0 then there is at least one number x in the close interval such that f(x)=0.
@@ -244,8 +242,8 @@ If f(x) is continuous on a closed interval [a,b], and c is any number between f(
 Way of action:
 +    Checking if applying x0 and x1 in the Polynom equation and multiply the result of the two, Provides a negative result.
 +    Using while loop and "binary search" principal to locate the x in which f(x)=0 +/-(Epsilon).  
-+    Every iteration advanced one side of the closed Interval according to the result of applying the mid point.
-+    When the result of applying the mid    is close by Epsilon or less to 0. return that mid.      
++    Every iteration advanced one side of the closed Interval according to the result of applying the midpoint.
++    When the result of applying the mid is close by Epsilon or less to 0. return that mid.      
 
 param x0-     left  x dot. 
 
@@ -253,43 +251,43 @@ param x1-     right x dot.
 
 param eps-     Epsilon step desired.
 
-return X the point which the function cuts the x axis with offset of a given eps. 
+return X the point in which the function cuts the x-axis with an offset of a given eps. 
 
 10.``public double area(double x0, double x1, double eps)``
 
-Calcuates the area in the close interval that block between the function and the Positive side of the x axis using Riemann Sums role. 
+Calculates the area in the close interval that blocks between the function and the Positive side of the x-axis using Riemann Sums role. 
             
 Way of action:
 +    From x0 to x1 moving in Epsilon steps.
 +    sum the area if the f(x)>0 (Positive area).
 
-@param eps     Epsilon step chosen by user.
+@param eps     Epsilon step chosen by the user.
 
-@param x1     Left hand side of the interval.
+@param x1 Left-hand side of the interval.
 
-@param x0        Right hand side of the interval.
+@param x0 Right-hand side of the interval.
 
-@return         The area between the function and the x axis in given close Interval.         
+@return         The area between the function and the x-axis on given close Interval.         
 
 11.``public Iterator<Monom> iteretor()``
 
 +    This function will use a sub-class.
 
-@return new PolyIterator . 
+@return new PolyIterator. 
 
 12.``public String toString()``
 
-The function Return a string of the Polynom.
+The function returns a string of the Polynom.
              
 Way of action:
-+    Using Polynom Iterator the function go over each Monom and Uses the Monom toString Method.
-+    Joint the Monoms by examine the sign of the next Monom coefficient. 
++    Using Polynom Iterator the function goes over each Monom and Uses the Monom toString Method.
++    Joint the Monoms by examining the sign of the next Monom coefficient. 
  
  @return String of the Polynom.         
 
 13.``public double f(double x)``
 
- The function apply double type x on the Polynom and calculates the result.
+ The function applies double type x on the Polynom and calculates the result.
  
  Ex. f(x)=2x^2+2x+2 , inputs: =2; , OutCome: 14.
    
@@ -301,6 +299,6 @@ Way of action:
  
 @param x - Value of x.
 
-# @author Omer Rugi && Dor Getter
+@author Omer Rugi && Dor Getter
 
 

@@ -34,11 +34,9 @@ Valid Input:
 valid input is a String containing only a valid Double type coefficient and a valid Int power.
 meaning that the following cases will be cause to a RuntimeExeption:
 
-case 1: any mathematical operations such as: "(2+3.5)x^2*2".
-
-case 2: any typing error containing a none integer type rather then "x^" : "12fx^2e".
-
-case 3: any mathematical expression for representing a rational numbers: "ex^2" , "pei*x".
++	case 1: any mathematical operations such as: "(2+3.5)x^2*2".
++	case 2: any typing error containing a none integer type rather then "x^" : "12fx^2e".
++	case 3: any mathematical expression for representing a rational numbers: "ex^2" , "pei*x".
 
 @param s - String containing a Monom type; 
 

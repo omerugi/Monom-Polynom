@@ -1,12 +1,15 @@
 # OOP - Project Ex0: Monom & Plynom.
 ## The project - build a class's of monom and polynom using given interfaces.
 
-Monom is an matimatical object that is build in the form of ax^b were a is a real number and b is a natual non negative number.
-You can add / substract / multiply 
-
 
 ### Monom:
-This class represents a valid Monom OBJ.
+
+This class represents a Monom OBJ- in form of ax^b.	
++	a-  Double  type coefficient.													
++	b-  Integer type power.														
+
+Monom class works as following: 
+*	Receiving a String containing mathematical expression according Monom ax^b structure. 
 
 ----------------------------------------------------------------------------------------------------------------------																														
 **Methods implemented**      
@@ -86,7 +89,13 @@ Receive the power substring and by Integer.parse returns wither the substring is
  
 ---------------------------------------------------------------------------------------------------------------------
 ### Polynom:
-This class represents a valid Polynom OBJ.
+This class represents a Polynom OBJ- implemented by String of Monom objects .								
+															
+Polynom class works as following: 
+
++	Receiving a String containing "Polynom" / Monom OBJ.
++	case 1: Breaks down the String into separate Monoms- and add separately to a ArrayList that will contain the Polynom.
++	case 2: recived a Monom OBJ. and adds it to a Polynom ArrayList.
 
 ----------------------------------------------------------------------------------------------------------------------																														
 **Methods implemented**      
@@ -212,7 +221,7 @@ Way of action:
 The function in a given 2 x's points returns the x dot in which the function 
 uts the x axis.   
 
-			Using the Intermediate Value Theorem
+Using the Intermediate Value Theorem
 
 If f(x) is continuous on a closed interval [a,b], and c is any number between f(a) and f(b) inclusive
  then there is at least one number x in the closed interval such that f(x)=c.
@@ -251,7 +260,7 @@ Way of action:
 
 11.``public Iterator<Monom> iteretor()``
 
-<<This function will use a sub-class>>
++	This function will use a sub-class.
 
 @return new PolyIterator . 
 

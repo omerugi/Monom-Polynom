@@ -301,10 +301,6 @@ Way of action:
  
 @param x - Value of x.
 
-
-
-
-
-* @author omer rugi && dor getter
+# @author Omer Rugi && Dor Getter
 
 
